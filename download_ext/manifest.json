@@ -1,0 +1,17 @@
+{
+  "description": "Multiple file downloads without showing SaveAs Dialog",
+  "background": {
+     "scripts": [ "background.js" ],
+     "persistent" : false
+  },
+  "content_scripts": [{
+     "js": [ "content_script.js"],
+     "matches": [ "<all_urls>" ],
+     "run_at": "document_start"
+  }],
+  "manifest_version": 2,
+  "name": "MultipleFileDownloads",
+  "permissions": [ "downloads" ],
+  "short_name": "MFD",
+  "version": "0.0.0.1"
+}
